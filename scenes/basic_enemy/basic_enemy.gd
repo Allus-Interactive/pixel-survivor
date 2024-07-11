@@ -3,7 +3,7 @@ extends CharacterBody2D
 const MAX_SPEED = 75
 
 func _ready():
-	pass # Replace with function body.
+	$Area2D.area_entered.connect(on_area_entered)
 
 func _process(delta):
 	var direction = get_direction_to_player()
@@ -15,3 +15,6 @@ func get_direction_to_player():
 	if player_node != null:
 		return (player_node.global_position - global_position).normalized()
 	return Vector2.ZERO
+
+func on_area_entered(other_area: Area2D):
+	queue_free()
