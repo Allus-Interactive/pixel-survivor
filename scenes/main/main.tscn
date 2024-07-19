@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bkhov0e56inqi"]
 
 [ext_resource type="PackedScene" uid="uid://yg243m3n8ncu" path="res://scenes/manager/enemy_manager.tscn" id="1_8ajvv"]
-[ext_resource type="PackedScene" uid="uid://cucg5lcbtpvpk" path="res://scenes/player/player.tscn" id="1_8nr2c"]
-[ext_resource type="PackedScene" uid="uid://dxtlmm7rgxbbu" path="res://scenes/game_camera/game_camera.tscn" id="1_buty7"]
+[ext_resource type="PackedScene" uid="uid://cucg5lcbtpvpk" path="res://scenes/game_object/player/player.tscn" id="1_8nr2c"]
+[ext_resource type="PackedScene" uid="uid://dxtlmm7rgxbbu" path="res://scenes/game_object/game_camera/game_camera.tscn" id="1_buty7"]
 [ext_resource type="PackedScene" uid="uid://bo0matvxak57f" path="res://scenes/UI/arena_time_ui.tscn" id="1_eq4h7"]
 [ext_resource type="TileSet" uid="uid://bdluiaqxo2ddu" path="res://resources/tileset.tres" id="1_wfdsc"]
 [ext_resource type="PackedScene" uid="uid://cltmc26e25sty" path="res://scenes/manager/arena_time_manager.tscn" id="2_q1ge1"]

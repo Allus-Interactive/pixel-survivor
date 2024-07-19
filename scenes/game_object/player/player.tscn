@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cucg5lcbtpvpk"]
 
-[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_1x5h7"]
-[ext_resource type="Texture2D" uid="uid://u4djqs8l7tdr" path="res://scenes/player/player.png" id="1_jv16e"]
+[ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_1x5h7"]
+[ext_resource type="Texture2D" uid="uid://u4djqs8l7tdr" path="res://scenes/game_object/player/player.png" id="1_jv16e"]
 [ext_resource type="PackedScene" uid="uid://cl7sbrk61e4rs" path="res://scenes/abilities/sword_ability_controller/sword_ability_controller.tscn" id="2_ao3gr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2keu8"]
