@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cltmc26e25sty"]
 
 [ext_resource type="Script" path="res://scenes/manager/arena_time_manager.gd" id="1_0wqbn"]
-[ext_resource type="PackedScene" uid="uid://b7q8hi3vlsg7p" path="res://scenes/UI/victory_screen.tscn" id="2_08mii"]
+[ext_resource type="PackedScene" uid="uid://b7q8hi3vlsg7p" path="res://scenes/UI/end_screen.tscn" id="2_dxpav"]
 
 [node name="ArenaTimeManager" type="Node"]
 script = ExtResource("1_0wqbn")
-victory_screen_sceen = ExtResource("2_08mii")
+end_screen_scene = ExtResource("2_dxpav")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
