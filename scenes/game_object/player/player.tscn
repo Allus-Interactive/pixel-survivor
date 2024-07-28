@@ -104,7 +104,7 @@ border_width_bottom = 2
 border_color = Color(0.247059, 0.14902, 0.192157, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1331r"]
-radius = 16.0
+radius = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rp2kp"]
 radius = 7.0
