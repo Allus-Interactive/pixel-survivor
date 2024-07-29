@@ -19,6 +19,7 @@ theme_override_constants/separation = 12
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_type_variation = &"AlternatePanelContainer"
 
 [node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer"]
