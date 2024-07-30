@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://dhttu2kd7mubj"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_kc8n7"]
+
+[resource]
+script = ExtResource("1_kc8n7")
+id = "movement_speed"
+max_quantity = 5
+name = "Movement Speed"
+description = "Increases movement speed rate by 10%"
