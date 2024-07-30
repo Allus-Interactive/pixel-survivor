@@ -4,7 +4,11 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2206"]
 bg_color = Color(0.458824, 0.890196, 1, 1)
-border_color = Color(0.247059, 0.14902, 0.192157, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.247059, 0.14902, 0.192157, 0)
 
 [node name="ExperienceBar" type="CanvasLayer"]
 script = ExtResource("1_qlwat")
