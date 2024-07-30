@@ -30,7 +30,7 @@ func select_card():
 	for other_card in get_tree().get_nodes_in_group("upgrade_card"):
 		if other_card == self:
 			continue
-		other_card.play("discard")
+		other_card.play_discard()
 	
 	await $AnimationPlayer.animation_finished
 	selected.emit()
