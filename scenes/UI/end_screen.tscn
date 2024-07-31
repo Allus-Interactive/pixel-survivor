@@ -1,9 +1,24 @@
 [gd_scene load_steps=9 format=3 uid="uid://b7q8hi3vlsg7p"]
 
 [ext_resource type="Script" path="res://scenes/UI/end_screen.gd" id="1_8yfgt"]
-[ext_resource type="AudioStream" uid="uid://ttmd6dceexps" path="res://assets/sfx/end_game/jingles_victory.ogg" id="2_1uxay"]
 [ext_resource type="PackedScene" uid="uid://dyxpewc2pmj21" path="res://scenes/UI/sound_button.tscn" id="2_8mlrr"]
-[ext_resource type="AudioStream" uid="uid://rvrl8argsmf2" path="res://assets/sfx/end_game/jingles_defeat.ogg" id="3_ohkm5"]
+[ext_resource type="AudioStream" uid="uid://ttmd6dceexps" path="res://assets/sfx/end_game/jingles_victory.ogg" id="2_vo6e0"]
+[ext_resource type="AudioStream" uid="uid://rvrl8argsmf2" path="res://assets/sfx/end_game/jingles_defeat.ogg" id="3_sie4p"]
+
+[sub_resource type="Animation" id="Animation_v50by"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_c6ecm"]
 resource_name = "in"
@@ -20,21 +35,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_v50by"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_5ropv"]
@@ -72,12 +72,12 @@ libraries = {
 autoplay = "in"
 
 [node name="VictoryStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_1uxay")
+stream = ExtResource("2_vo6e0")
 volume_db = -5.0
 bus = &"sfx"
 
 [node name="DefeatStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ohkm5")
+stream = ExtResource("3_sie4p")
 volume_db = -5.0
 bus = &"sfx"
 
@@ -117,11 +117,8 @@ theme_override_constants/separation = 16
 [node name="TitleLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0.14902, 0.168627, 0.266667, 1)
-theme_override_colors/font_outline_color = Color(0.14902, 0.168627, 0.266667, 1)
-theme_override_constants/shadow_offset_x = 0
+theme_type_variation = &"BlueOutlineLabel"
 theme_override_constants/shadow_offset_y = 0
-theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 32
 text = "You Are Victorious"
 horizontal_alignment = 1

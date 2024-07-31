@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcbfh36ompqo0"]
+[gd_scene load_steps=5 format=3 uid="uid://dcbfh36ompqo0"]
 
 [ext_resource type="TileSet" uid="uid://bdluiaqxo2ddu" path="res://resources/tileset.tres" id="1_vu72p"]
 [ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_xkfm2"]
+[ext_resource type="PackedScene" uid="uid://cofo6n72f0f38" path="res://scenes/UI/vignette.tscn" id="2_dxuht"]
 [ext_resource type="PackedScene" uid="uid://dyxpewc2pmj21" path="res://scenes/UI/sound_button.tscn" id="2_h6vjt"]
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -38,6 +39,7 @@ size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 32
 text = "Pixel Survivor"
 
@@ -55,3 +57,5 @@ text = "Options"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
+
+[node name="Vignette" parent="." instance=ExtResource("2_dxuht")]
