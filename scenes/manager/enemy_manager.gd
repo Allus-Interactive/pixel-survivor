@@ -29,8 +29,9 @@ func get_spawn_position():
 	
 	for i in 4:
 		spawn_position = player.global_position + (random_direction * SPAWN_RADIUS)
+		var additional_check_offset = random_direction * 20
 		
-		var query_params = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position, 1)
+		var query_params = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position + additional_check_offset, 1)
 		var result = get_tree().root.world_2d.direct_space_state.intersect_ray(query_params)
 		
 		if result.is_empty():
