@@ -7,4 +7,4 @@ script = ExtResource("1_kc8n7")
 id = "movement_speed"
 max_quantity = 5
 name = "Movement Speed"
-description = "Increases movement speed rate by 10%"
+description = "Increases movement speed rate by 5%"

@@ -71,4 +71,4 @@ func on_ability_upgrade_added(ability_upgrade: AbilityUpgrade, current_upgrades:
 		var ability = ability_upgrade as Ability
 		abilities_manager.add_child(ability.ability_controller_scene.instantiate())
 	elif ability_upgrade.id == "movement_speed":
-		velocity_component.max_speed = base_speed + (base_speed + current_upgrades["movement_speed"]["quantity"] * 0.1)
+		velocity_component.max_speed = base_speed + (base_speed * current_upgrades["movement_speed"]["quantity"] * 0.05)
