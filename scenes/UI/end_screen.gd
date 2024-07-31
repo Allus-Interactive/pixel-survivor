@@ -9,9 +9,9 @@ func _ready():
 	tween.tween_property(panel_container, "scale", Vector2.ONE, 0.3)\
 	.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 	
-	
 	get_tree().paused = true
-	%ContinueButton.pressed.connect(on_continue_button_pressed)
+	%RestartButton.pressed.connect(on_restart_button_pressed)
+	%UpgradesButton.pressed.connect(on_upgrades_button_pressed)
 	%QuitButton.pressed.connect(on_quit_button_pressed)
 
 func set_defeat():
@@ -25,14 +25,18 @@ func play_jingle(defeat: bool = false):
 	else:
 		$VictoryStreamPlayer.play()
 
-func on_continue_button_pressed():
+func process_scene_transition(scene_path: String):
 	ScreenTransition.transition()
 	await ScreenTransition.transitioned_halfway
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/UI/meta_menu.tscn")
+	get_tree().change_scene_to_file(scene_path)
+	
+
+func on_restart_button_pressed():
+	process_scene_transition("res://scenes/main/main.tscn")
+
+func on_upgrades_button_pressed():
+	process_scene_transition("res://scenes/UI/meta_menu.tscn")
 
 func on_quit_button_pressed():
-	ScreenTransition.transition()
-	await ScreenTransition.transitioned_halfway
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/UI/main_menu.tscn")
+	process_scene_transition("res://scenes/UI/main_menu.tscn")
