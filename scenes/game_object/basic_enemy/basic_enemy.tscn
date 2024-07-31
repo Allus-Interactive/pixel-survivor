@@ -9,12 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://c6es4biueipa7" path="res://scenes/component/velocity_component.tscn" id="4_ymkim"]
 [ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_y6ofl"]
 [ext_resource type="PackedScene" uid="uid://bt82rqgxg1ovo" path="res://scenes/component/hit_flash_component.tscn" id="8_mqkye"]
-[ext_resource type="AudioStream" uid="uid://bc0mahx77y7px" path="res://assets/audio/footstep_carpet_000.ogg" id="10_366kl"]
+[ext_resource type="AudioStream" uid="uid://bc0mahx77y7px" path="res://assets/sfx/enemy_hit/footstep_carpet_000.ogg" id="10_366kl"]
 [ext_resource type="PackedScene" uid="uid://qcnjr44toisa" path="res://scenes/component/random_stream_player_2d_component.tscn" id="10_dp5xb"]
-[ext_resource type="AudioStream" uid="uid://cta76ggmp4a52" path="res://assets/audio/footstep_carpet_001.ogg" id="12_f5uck"]
-[ext_resource type="AudioStream" uid="uid://dhuteyclf0dge" path="res://assets/audio/footstep_carpet_002.ogg" id="13_vm6yp"]
-[ext_resource type="AudioStream" uid="uid://duh2peldpc0tk" path="res://assets/audio/footstep_carpet_003.ogg" id="14_fk6qs"]
-[ext_resource type="AudioStream" uid="uid://c5vjpypgcngr4" path="res://assets/audio/footstep_carpet_004.ogg" id="15_34ojc"]
+[ext_resource type="AudioStream" uid="uid://cta76ggmp4a52" path="res://assets/sfx/enemy_hit/footstep_carpet_001.ogg" id="12_f5uck"]
+[ext_resource type="AudioStream" uid="uid://dhuteyclf0dge" path="res://assets/sfx/enemy_hit/footstep_carpet_002.ogg" id="13_vm6yp"]
+[ext_resource type="AudioStream" uid="uid://duh2peldpc0tk" path="res://assets/sfx/enemy_hit/footstep_carpet_003.ogg" id="14_fk6qs"]
+[ext_resource type="AudioStream" uid="uid://c5vjpypgcngr4" path="res://assets/sfx/enemy_hit/footstep_carpet_004.ogg" id="15_34ojc"]
 
 [sub_resource type="Animation" id="Animation_e8l43"]
 length = 0.001
