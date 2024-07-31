@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Pixel Survivor"
 run/main_scene="res://scenes/UI/main_menu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="PixelSurvivor"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
