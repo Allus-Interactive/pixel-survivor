@@ -4,6 +4,7 @@ const SPAWN_RADIUS = 375
 
 @export var basic_enemy_scene: PackedScene
 @export var spider_enemy_scene: PackedScene
+@export var slime_enemy_scene: PackedScene
 @export var wizard_enemy_scene: PackedScene
 @export var arena_time_manager: Node
 
@@ -49,7 +50,7 @@ func on_timer_timeout():
 		return
 	
 	var enemy_scene = enemy_table.pick_item()
-	var enemy = enemy_scene.instantiate() as Node2D
+	var enemy = enemy_scene.inswtantiate() as Node2D
 	
 	var entities_layer = get_tree().get_first_node_in_group("entities_layer")
 	entities_layer.add_child(enemy)
@@ -65,6 +66,8 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		enemy_table.add_item(spider_enemy_scene, 20)
 	# 12 = 60 seconds into game
 	elif arena_difficulty == 12:
-		enemy_table.add_item(wizard_enemy_scene, 30)
-		pass
+		enemy_table.add_item(slime_enemy_scene, 30)
+	# 18 = 90 seconds into game
+	elif arena_difficulty == 18:
+		enemy_table.add_item(wizard_enemy_scene, 40)
 	# continue with elif for each new enemy
