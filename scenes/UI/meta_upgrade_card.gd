@@ -12,10 +12,10 @@ var upgrade: MetaUpgrade
 func _ready():
 	purchase_button.pressed.connect(on_purchase_pressed)
 
-func set_meta_upgrade(upgrade: MetaUpgrade):
-	self.upgrade = upgrade
-	name_label.text = upgrade.title
-	description_label.text = upgrade.description
+func set_meta_upgrade(_upgrade: MetaUpgrade):
+	self.upgrade = _upgrade
+	name_label.text = _upgrade.title
+	description_label.text = _upgrade.description
 	update_progress()
 
 func update_progress():
