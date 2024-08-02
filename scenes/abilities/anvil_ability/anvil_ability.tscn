@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://52gxedsb07pv"]
+[gd_scene load_steps=12 format=3 uid="uid://52gxedsb07pv"]
 
 [ext_resource type="Texture2D" uid="uid://dhmp1686h6fso" path="res://scenes/abilities/anvil_ability/anvil.png" id="1_p4ghr"]
 [ext_resource type="Script" path="res://scenes/abilities/anvil_ability/anvil_ability.gd" id="1_s03gm"]
@@ -129,14 +129,6 @@ _data = {
 "default": SubResource("Animation_ky2ye")
 }
 
-[sub_resource type="Gradient" id="Gradient_8fmat"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.367052)
-colors = PackedColorArray(0.545098, 0.607843, 0.705882, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_y5qv3"]
-gradient = SubResource("Gradient_8fmat")
-
 [sub_resource type="Curve" id="Curve_mrwap"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.147059, 1), 0.0, 0.0, 0, 0, Vector2(0.596257, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
@@ -150,14 +142,11 @@ emission_shape = 1
 emission_sphere_radius = 6.0
 angle_max = 360.0
 spread = 180.0
-initial_velocity_min = 250.0
-initial_velocity_max = 350.0
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
 gravity = Vector3(0, 0, 0)
-damping_min = 1500.0
-damping_max = 1750.0
 scale_min = 0.5
 scale_curve = SubResource("CurveTexture_sxqms")
-color_initial_ramp = SubResource("GradientTexture1D_y5qv3")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_arjxg"]
 radius = 32.0
@@ -176,7 +165,7 @@ emitting = false
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_deicq")
 texture = ExtResource("2_3xdse")
-lifetime = 0.3
+lifetime = 0.2
 one_shot = true
 explosiveness = 0.9
 fixed_fps = 0
