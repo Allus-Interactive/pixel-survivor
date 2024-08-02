@@ -3,6 +3,7 @@ extends Node
 const SPAWN_RADIUS = 375
 
 @export var basic_enemy_scene: PackedScene
+@export var bat_enemy_scene: PackedScene
 @export var spider_enemy_scene: PackedScene
 @export var slime_enemy_scene: PackedScene
 @export var wizard_enemy_scene: PackedScene
@@ -64,11 +65,11 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	
 	# 6 = 30 seconds into the game
 	if arena_difficulty == 6:
-		enemy_table.add_item(spider_enemy_scene, 20)
+		enemy_table.add_item(spider_enemy_scene, 15)
 	# 12 = 60 seconds into game
 	elif arena_difficulty == 12:
-		enemy_table.add_item(slime_enemy_scene, 30)
+		enemy_table.add_item(bat_enemy_scene, 10)
 	# 18 = 90 seconds into game
 	elif arena_difficulty == 18:
-		enemy_table.add_item(wizard_enemy_scene, 40)
+		enemy_table.add_item(slime_enemy_scene, 15)
 	# continue with elif for each new enemy
