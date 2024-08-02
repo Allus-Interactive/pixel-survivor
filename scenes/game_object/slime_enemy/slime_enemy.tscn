@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://c4qd65jdkfbg2"]
 
-[ext_resource type="Script" path="res://scenes/game_object/wizard_enemy/wizard_enemy.gd" id="1_h2jpj"]
+[ext_resource type="Script" path="res://scenes/game_object/slime_enemy/slime_enemy.gd" id="1_iu1l7"]
 [ext_resource type="PackedScene" uid="uid://ona7ddbkltdq" path="res://scenes/component/health_component.tscn" id="2_v2fj0"]
 [ext_resource type="PackedScene" uid="uid://xls4b52jvo4y" path="res://scenes/component/vial_drop_component.tscn" id="3_poi73"]
 [ext_resource type="PackedScene" uid="uid://c6es4biueipa7" path="res://scenes/component/velocity_component.tscn" id="4_45f36"]
@@ -131,11 +131,11 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_nkyks"]
 radius = 4.0
 
-[node name="WizardEnemy" type="CharacterBody2D" groups=["enemy"]]
+[node name="SlimeEnemy" type="CharacterBody2D" groups=["enemy"]]
 rotation = 0.000255171
 collision_layer = 8
 collision_mask = 9
-script = ExtResource("1_h2jpj")
+script = ExtResource("1_iu1l7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

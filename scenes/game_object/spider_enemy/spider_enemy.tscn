@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cs5i4jq36kw6j"]
 
-[ext_resource type="Script" path="res://scenes/game_object/basic_enemy/basic_enemy.gd" id="1_nh1ig"]
+[ext_resource type="Script" path="res://scenes/game_object/spider_enemy/spider_enemy.gd" id="1_iax6g"]
 [ext_resource type="PackedScene" uid="uid://ona7ddbkltdq" path="res://scenes/component/health_component.tscn" id="2_idc8w"]
 [ext_resource type="PackedScene" uid="uid://xls4b52jvo4y" path="res://scenes/component/vial_drop_component.tscn" id="3_ev062"]
 [ext_resource type="PackedScene" uid="uid://c6es4biueipa7" path="res://scenes/component/velocity_component.tscn" id="4_htde5"]
@@ -89,11 +89,11 @@ radius = 12.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_x8m17"]
 radius = 5.0
 
-[node name="BasicEnemy" type="CharacterBody2D" groups=["enemy"]]
+[node name="SpiderEnemy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 8
 collision_mask = 9
 motion_mode = 1
-script = ExtResource("1_nh1ig")
+script = ExtResource("1_iax6g")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
