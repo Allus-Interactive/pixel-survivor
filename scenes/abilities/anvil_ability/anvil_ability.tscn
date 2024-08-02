@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dhmp1686h6fso" path="res://scenes/abilities/anvil_ability/anvil.png" id="1_p4ghr"]
 [ext_resource type="Script" path="res://scenes/abilities/anvil_ability/anvil_ability.gd" id="1_s03gm"]
-[ext_resource type="Texture2D" uid="uid://bmeqem64x5nop" path="res://assets/particle.png" id="2_3xdse"]
+[ext_resource type="Texture2D" uid="uid://bmeqem64x5nop" path="res://assets/particles/anvil_particle.png" id="2_3xdse"]
 [ext_resource type="PackedScene" uid="uid://dnglld03e5dw" path="res://scenes/component/hit_box_component.tscn" id="2_5mjsi"]
 
 [sub_resource type="Animation" id="Animation_80xha"]
