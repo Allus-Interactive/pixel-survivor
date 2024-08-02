@@ -12,6 +12,7 @@ var upgrade_axe = preload("res://resources/upgrades/axe.tres")
 var upgrade_axe_damage = preload("res://resources/upgrades/axe_damage.tres")
 var upgrade_movement_speed = preload("res://resources/upgrades/movement_speed.tres")
 var upgrade_anvil = preload("res://resources/upgrades/anvil.tres")
+var upgrade_anvil_count = preload("res://resources/upgrades/anvil_count.tres")
 
 func _ready():
 	upgrade_pool.add_item(upgrade_axe, 10)
@@ -43,6 +44,8 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
 	if chosen_upgrade.id == upgrade_axe.id:
 		upgrade_pool.add_item(upgrade_axe_damage, 10)
+	elif chosen_upgrade.id == upgrade_anvil.id:
+		upgrade_pool.add_item(upgrade_anvil_count, 5)
 
 func pick_upgrades():
 	var chosen_upgrades: Array[AbilityUpgrade] = []
