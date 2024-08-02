@@ -45,8 +45,9 @@ layer_0/tile_data = PackedInt32Array(0, 131072, 4, 1, 131072, 4, 2, 196608, 4, 3
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
 y_sort_enabled = true
 
-[node name="Player" parent="Entities" instance=ExtResource("1_8nr2c")]
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_8nr2c")]
 unique_name_in_owner = true
 position = Vector2(580, 329)
+arena_time_manager = NodePath("../../ArenaTimeManager")
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
