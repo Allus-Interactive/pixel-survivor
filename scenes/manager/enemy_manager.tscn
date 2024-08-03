@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://yg243m3n8ncu"]
+[gd_scene load_steps=9 format=3 uid="uid://yg243m3n8ncu"]
 
 [ext_resource type="Script" path="res://scenes/manager/enemy_manager.gd" id="1_apybj"]
 [ext_resource type="PackedScene" uid="uid://cg78lh0yg6qny" path="res://scenes/game_object/basic_enemy/basic_enemy.tscn" id="2_e2hvt"]
@@ -6,13 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://cs5i4jq36kw6j" path="res://scenes/game_object/spider_enemy/spider_enemy.tscn" id="3_fgc2o"]
 [ext_resource type="PackedScene" uid="uid://crwn2iw17y738" path="res://scenes/game_object/wizard_enemy/wizard_enemy.tscn" id="3_n5sbe"]
 [ext_resource type="PackedScene" uid="uid://c4qd65jdkfbg2" path="res://scenes/game_object/slime_enemy/slime_enemy.tscn" id="4_nu8yb"]
+[ext_resource type="PackedScene" uid="uid://bvsdhxx67u5dh" path="res://scenes/game_object/ghost_enemy/ghost_enemy.tscn" id="6_cokel"]
+[ext_resource type="PackedScene" uid="uid://f8vjpx4sadnr" path="res://scenes/game_object/cyclops_enemy/cyclops_enemy.tscn" id="7_gg2dy"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_apybj")
 basic_enemy_scene = ExtResource("2_e2hvt")
-bat_enemy_scene = ExtResource("3_0e2u2")
 spider_enemy_scene = ExtResource("3_fgc2o")
+bat_enemy_scene = ExtResource("3_0e2u2")
 slime_enemy_scene = ExtResource("4_nu8yb")
+ghost_enemy_scene = ExtResource("6_cokel")
+cyclops_enemy_scene = ExtResource("7_gg2dy")
 wizard_enemy_scene = ExtResource("3_n5sbe")
 
 [node name="Timer" type="Timer" parent="."]
