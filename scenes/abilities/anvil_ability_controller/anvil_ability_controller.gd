@@ -1,10 +1,11 @@
 extends Node
 
 const BASE_RANGE = 100
-const BASE_DAMAGE = 15
 
 @export var anvil_ability_scene: PackedScene
 
+var base_damage = 15
+var additional_damage_percent = 1
 var anvil_count = 0
 
 func _ready():
@@ -33,8 +34,10 @@ func on_timer_timeout():
 		var anvil_ability_instance = anvil_ability_scene.instantiate() as AnvilAbility
 		get_tree().get_first_node_in_group("foreground_layer").add_child(anvil_ability_instance)
 		anvil_ability_instance.global_position = spawn_position
-		anvil_ability_instance.hit_box_component.damage = BASE_DAMAGE
+		anvil_ability_instance.hit_box_component.damage = base_damage * additional_damage_percent
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
 	if upgrade.id == "anvil_count":
 		anvil_count = current_upgrades["anvil_count"]["quantity"]
+	elif upgrade.id == "anvil_damage":
+		additional_damage_percent = 1 + (current_upgrades["anvil_damage"]["quantity"] * 0.2)
