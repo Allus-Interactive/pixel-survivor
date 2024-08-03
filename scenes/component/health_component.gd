@@ -13,7 +13,6 @@ func _ready():
 
 func damage(damage_amount: float):
 	current_health = clamp(current_health - damage_amount, 0, max_health)
-	current_health = max(current_health - damage_amount, 0)
 	health_changed.emit()
 	if damage_amount > 0:
 		health_decreased.emit()
