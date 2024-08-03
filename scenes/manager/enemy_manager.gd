@@ -87,5 +87,7 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		enemy_table.remove_item(spider_enemy_scene)
 	# continue with elif for each new enemy
 	
-	if (arena_difficulty % 6) == 0:
+	# TODO revist if game balance feels off
+	# every minute increase number of enemies spawned per second
+	if (arena_difficulty % 12) == 0:
 		number_to_spawn += 1 
