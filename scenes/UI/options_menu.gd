@@ -13,6 +13,9 @@ func _ready():
 	sfx_slider.value_changed.connect(on_audio_slider_changed.bind("sfx"))
 	music_slider.value_changed.connect(on_audio_slider_changed.bind("music"))
 	update_display()
+	
+	if OS.get_name() == "Web":
+		%WindowOptionContainer.queue_free()
 
 func update_display():
 	window_button.text = "Windowed"
