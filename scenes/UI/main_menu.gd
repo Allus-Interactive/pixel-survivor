@@ -7,6 +7,9 @@ func _ready():
 	%UpgradesButton.pressed.connect(on_upgrades_pressed)
 	%OptionsButton.pressed.connect(on_options_pressed)
 	%QuitButton.pressed.connect(on_quit_pressed)
+	
+	if OS.get_name() == "Web":
+		%QuitButton.queue_free()
 
 func on_play_pressed():
 	ScreenTransition.transition()
