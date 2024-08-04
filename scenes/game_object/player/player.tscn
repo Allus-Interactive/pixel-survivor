@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cl7sbrk61e4rs" path="res://scenes/abilities/sword_ability_controller/sword_ability_controller.tscn" id="2_ao3gr"]
 [ext_resource type="PackedScene" uid="uid://c6es4biueipa7" path="res://scenes/component/velocity_component.tscn" id="2_haywp"]
 [ext_resource type="PackedScene" uid="uid://ona7ddbkltdq" path="res://scenes/component/health_component.tscn" id="2_vwuy1"]
-[ext_resource type="Texture2D" uid="uid://banx3kk1sjh1a" path="res://scenes/game_object/player/player_idle.png" id="3_bxobe"]
-[ext_resource type="Texture2D" uid="uid://d6ykupcpyv0" path="res://scenes/game_object/player/player_walk.png" id="4_v03w6"]
+[ext_resource type="Texture2D" uid="uid://cdqr752khgedl" path="res://scenes/game_object/player/knight_player_idle.png" id="3_mlnoh"]
+[ext_resource type="Texture2D" uid="uid://b85ookbb7v147" path="res://scenes/game_object/player/knight_player_walk.png" id="4_7ju7w"]
 [ext_resource type="PackedScene" uid="uid://qcnjr44toisa" path="res://scenes/component/random_stream_player_2d_component.tscn" id="5_6tmi6"]
 [ext_resource type="AudioStream" uid="uid://dse831v6ijcs2" path="res://assets/sfx/player_hit/impactMining_000.ogg" id="6_iulve"]
 [ext_resource type="AudioStream" uid="uid://drv3q18x2cqbd" path="res://assets/sfx/player_hit/impactMining_001.ogg" id="7_vnpuv"]
@@ -66,7 +66,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_bxobe")]
+"values": [ExtResource("3_mlnoh")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -148,7 +148,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_v03w6")]
+"values": [ExtResource("4_7ju7w")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
