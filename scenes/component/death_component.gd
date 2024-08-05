@@ -2,9 +2,14 @@ extends Node2D
 
 @export var health_component: Node
 @export var sprite: Sprite2D
+@export var death_sprite: Texture2D
 
 func _ready():
-	$GPUParticles2D.texture = sprite.texture
+	if death_sprite == null:
+		$GPUParticles2D.texture = sprite.texture
+	else:
+		$GPUParticles2D.texture = death_sprite
+		
 	health_component.died.connect(on_died)
 
 func on_died():
