@@ -38,7 +38,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("11_k0sgg")]
+"values": [ExtResource("4_7ju7w")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -252,7 +252,7 @@ debug_color = Color(0.344022, 0.450981, 0.169781, 0.42)
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-texture = ExtResource("11_k0sgg")
+texture = ExtResource("4_7ju7w")
 offset = Vector2(0, -8)
 hframes = 8
 
