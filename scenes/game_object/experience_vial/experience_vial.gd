@@ -3,6 +3,8 @@ extends Node2D
 @onready var collision_shape_2d = $Area2D/CollisionShape2D
 @onready var sprite = $Sprite2D
 
+var exp_gain: int = 1
+
 func _ready():
 	$Area2D.area_entered.connect(on_area_entered)
 
@@ -18,8 +20,11 @@ func tween_collect(percent: float, start_position: Vector2):
 	#var target_rotation = direction_from_start.angle() + deg_to_rad(90)
 	#rotation = lerp_angle(rotation, target_rotation, 1 - exp(-2 * get_process_delta_time()))
 
+func set_exp_gain(exp_collecton_amount: int):
+	exp_gain = exp_collecton_amount
+
 func collect():
-	GameEvents.emit_experience_vial_collected(1)
+	GameEvents.emit_experience_vial_collected(exp_gain)
 	queue_free()
 
 func disable_collision():
