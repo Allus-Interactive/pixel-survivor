@@ -9,6 +9,8 @@ signal health_decreased
 var current_health
 
 func _ready():
+	GameEvents.health_vial_collected.connect(on_health_vial_collected)
+	
 	current_health = max_health
 
 func damage(damage_amount: float):
@@ -30,3 +32,6 @@ func check_death():
 	if current_health == 0:
 		died.emit()
 		owner.queue_free()
+
+func on_health_vial_collected(number: float):
+	heal(number)
