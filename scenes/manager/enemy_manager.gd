@@ -5,7 +5,6 @@ const SPAWN_RADIUS = 375
 # old enemies
 # @export var basic_enemy_scene: PackedScene
 @export var spider_enemy_scene: PackedScene
-@export var bat_enemy_scene: PackedScene
 @export var slime_enemy_scene: PackedScene
 @export var ghost_enemy_scene: PackedScene
 @export var cyclops_enemy_scene: PackedScene
@@ -13,6 +12,7 @@ const SPAWN_RADIUS = 375
 
 # new enemies
 @export var blue_slime_enemy_scene: PackedScene
+@export var bat_enemy_scene: PackedScene
 
 @export var arena_time_manager: Node
 
@@ -93,24 +93,29 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		#enemy_table.remove_item(spider_enemy_scene)
 	## continue with elif for each new enemy
 	
-	### NEW ENEMY TABLE
+	### NEW ENEMY TABLE - Add enemies as new ones are created
 	# 6 = 30 seconds into the game
 	if arena_difficulty == 6:
-		enemy_table.add_item(spider_enemy_scene, 10)
+		pass
+		#enemy_table.add_item(spider_enemy_scene, 10)
 	# 12 = 60 seconds/1 minute into game
 	elif arena_difficulty == 12:
-		enemy_table.add_item(bat_enemy_scene, 10)
-	# 24 = 120 seconds/2 minutes into game
+		pass
+		enemy_table.add_item(bat_enemy_scene, 5)
+	## 24 = 120 seconds/2 minutes into game
 	elif arena_difficulty == 24:
-		enemy_table.add_item(slime_enemy_scene, 10)
+		pass
+		#enemy_table.add_item(slime_enemy_scene, 10)
 	# 36 = 180 seconds/3 minutes into game
 	elif arena_difficulty == 36:
-		enemy_table.add_item(ghost_enemy_scene, 10)
-		enemy_table.remove_item(blue_slime_enemy_scene)
+		pass
+		#enemy_table.add_item(ghost_enemy_scene, 10)
+		#enemy_table.remove_item(blue_slime_enemy_scene)
 	# 48 = 240 seconds/4 minutes into game
 	elif arena_difficulty == 48:
-		enemy_table.add_item(cyclops_enemy_scene, 10)
-		enemy_table.remove_item(spider_enemy_scene)
+		pass
+		#enemy_table.add_item(cyclops_enemy_scene, 10)
+		#enemy_table.remove_item(spider_enemy_scene)
 	# continue with elif for each new enemy
 	
 	# TODO revist to fix game balance, amount of enemies can feel too much

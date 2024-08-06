@@ -12,12 +12,12 @@
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_apybj")
 spider_enemy_scene = ExtResource("3_fgc2o")
-bat_enemy_scene = ExtResource("3_0e2u2")
 slime_enemy_scene = ExtResource("4_nu8yb")
 ghost_enemy_scene = ExtResource("6_cokel")
 cyclops_enemy_scene = ExtResource("7_gg2dy")
 wizard_enemy_scene = ExtResource("3_n5sbe")
 blue_slime_enemy_scene = ExtResource("8_0i7iv")
+bat_enemy_scene = ExtResource("3_0e2u2")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
