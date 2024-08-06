@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://duh2peldpc0tk" path="res://assets/sfx/enemy_hit/footstep_carpet_003.ogg" id="12_vnvm1"]
 [ext_resource type="AudioStream" uid="uid://c5vjpypgcngr4" path="res://assets/sfx/enemy_hit/footstep_carpet_004.ogg" id="13_cbo5t"]
 [ext_resource type="PackedScene" uid="uid://vlte1swbrltw" path="res://scenes/component/hurt_box_component.tscn" id="14_bhk7t"]
-[ext_resource type="Texture2D" uid="uid://cu6l05hmhbodh" path="res://scenes/game_object/blue_slime_enemy/blue_slime_enemy.png" id="15_4hd7j"]
+[ext_resource type="Texture2D" uid="uid://deeoiubvawunk" path="res://scenes/game_object/blue_slime_enemy/blue_slime_enemy.png" id="15_4hd7j"]
 
 [sub_resource type="Animation" id="Animation_jnn0p"]
 length = 0.001
