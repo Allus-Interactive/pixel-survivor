@@ -24,7 +24,7 @@ func on_died():
 			return
 		
 		instantiate_vial(exp_vial_scene)
-	elif randf() <= adjusted_drop_percent:
+	elif randf() <= adjusted_drop_percent / 4:
 		# drop health vial
 		if health_vial_scene == null:
 			return
