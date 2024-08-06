@@ -14,8 +14,9 @@ func tween_collect(percent: float, start_position: Vector2):
 	global_position = start_position.lerp(player.global_position, percent)
 	var direction_from_start = player.global_position - start_position
 	
-	var target_rotation = direction_from_start.angle() + deg_to_rad(90)
-	rotation = lerp_angle(rotation, target_rotation, 1 - exp(-2 * get_process_delta_time()))
+	# Removed rotation to better suit new animation
+	#var target_rotation = direction_from_start.angle() + deg_to_rad(90)
+	#rotation = lerp_angle(rotation, target_rotation, 1 - exp(-2 * get_process_delta_time()))
 
 func collect():
 	GameEvents.emit_experience_vial_collected(1)
