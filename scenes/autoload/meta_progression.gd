@@ -29,12 +29,15 @@ func save():
 	file.store_var(save_data)
 
 func add_meta_upgrade(upgrade: MetaUpgrade):
-	if !save_data["meta_upgrades"].has(upgrade.id):
+	if save_data["player_stats"].has(upgrade.id):
+		save_data["player_stats"][upgrade.id] += 0.1
+	elif !save_data["meta_upgrades"].has(upgrade.id):
 		save_data["meta_upgrades"][upgrade.id] = {
 			"quantity": 0
 		}
+	else:
+		save_data["meta_upgrades"][upgrade.id]["quantity"] += 1
 	
-	save_data["meta_upgrades"][upgrade.id]["quantity"] += 1
 	save()
 
 func get_upgrade_count(upgrade_id: String):
@@ -55,11 +58,7 @@ func increase_loss_count():
 	save_data["loss_count"] += 1
 
 func get_player_stat_multiplier(stat_id: String):
-	print(save_data["player_stats"][stat_id])
 	return save_data["player_stats"][stat_id]
-	
-func increase_player_stat_multiplier(stat_id: String):
-	save_data["player_stats"][stat_id] += 0.1
 
 func on_exp_collected(number: float):
 	save_data["meta_upgrade_currency"] += number
