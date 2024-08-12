@@ -14,7 +14,7 @@
 [node name="MetaMenu" type="CanvasLayer"]
 layer = 2
 script = ExtResource("1_dukm5")
-upgrades = Array[Resource("res://resources/meta_upgrades/meta_upgrade.gd")]([ExtResource("2_1mfev"), ExtResource("3_rs2l1"), ExtResource("4_co3ou"), ExtResource("5_6vx1k"), ExtResource("6_wi5iq")])
+upgrades = Array[Resource("res://resources/meta_upgrades/meta_upgrade.gd")]([ExtResource("4_co3ou"), ExtResource("5_6vx1k"), ExtResource("6_wi5iq"), ExtResource("2_1mfev"), ExtResource("3_rs2l1")])
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_pjdmr")
