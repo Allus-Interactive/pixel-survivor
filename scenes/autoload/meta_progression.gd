@@ -6,7 +6,12 @@ var save_data: Dictionary = {
 	"win_count": 0,
 	"loss_count": 0,
 	"meta_upgrade_currency": 0,
-	"meta_upgrades": {}
+	"meta_upgrades": {},
+	"player_stats": {
+		"damage": 1,
+		"health": 1,
+		"movement": 1
+	}
 }
 
 func _ready():
@@ -36,6 +41,25 @@ func get_upgrade_count(upgrade_id: String):
 	if save_data["meta_upgrades"].has(upgrade_id):
 		return save_data["meta_upgrades"][upgrade_id]["quantity"]
 	return 0
+
+func get_win_count():
+	return save_data["win_count"]
+
+func get_loss_count():
+	return save_data["loss_count"]
+
+func increase_win_count():
+	save_data["win_count"] += 1
+	
+func increase_loss_count():
+	save_data["loss_count"] += 1
+
+func get_player_stat_multiplier(stat_id: String):
+	print(save_data["player_stats"][stat_id])
+	return save_data["player_stats"][stat_id]
+	
+func increase_player_stat_multiplier(stat_id: String):
+	save_data["player_stats"][stat_id] += 0.1
 
 func on_exp_collected(number: float):
 	save_data["meta_upgrade_currency"] += number
