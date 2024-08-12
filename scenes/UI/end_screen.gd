@@ -19,7 +19,6 @@ func set_defeat():
 	play_jingle(true)
 
 func play_jingle(defeat: bool = false):
-	print(defeat)
 	if defeat:
 		$DefeatStreamPlayer.play()
 	else:

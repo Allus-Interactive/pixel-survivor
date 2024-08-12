@@ -23,7 +23,6 @@ func update_progress():
 	if MetaProgression.save_data["meta_upgrades"].has(upgrade.id):
 		current_quantity = MetaProgression.save_data["meta_upgrades"][upgrade.id]["quantity"]
 	elif MetaProgression.save_data["player_stats"].has(upgrade.id):
-		print("upgrade: " + str(MetaProgression.save_data["player_stats"][upgrade.id]))
 		var upgrade_count = MetaProgression.save_data["player_stats"][upgrade.id]
 		current_quantity = (upgrade_count - 1) / 0.1
 	var is_maxed = current_quantity >= upgrade.max_quantity

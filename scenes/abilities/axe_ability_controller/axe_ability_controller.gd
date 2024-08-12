@@ -2,7 +2,7 @@ extends Node
 
 @export var axe_ability_scene: PackedScene
 
-var base_damage = 10
+var base_damage = 10 * MetaProgression.save_data["player_stats"]["damage"]
 var additional_damage_percent = 1
 var base_wait_time
 
@@ -32,5 +32,4 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 	elif upgrade.id == "axe_rate":
 		var percent_reduction = current_upgrades["axe_rate"]["quantity"] * 0.05
 		$Timer.wait_time = base_wait_time * (1 - percent_reduction)
-		print($Timer.wait_time)
 		$Timer.start()

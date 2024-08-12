@@ -4,7 +4,7 @@ const BASE_RANGE = 100
 
 @export var anvil_ability_scene: PackedScene
 
-var base_damage = 15
+var base_damage = 15 * MetaProgression.save_data["player_stats"]["damage"]
 var additional_damage_percent = 1
 var anvil_count = 0
 

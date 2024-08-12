@@ -10,6 +10,8 @@ var current_health
 
 func _ready():
 	GameEvents.health_vial_collected.connect(on_health_vial_collected)
+	if owner.name == "Player":
+		max_health = max_health * MetaProgression.save_data["player_stats"]["health"]
 	
 	current_health = max_health
 
